@@ -9,9 +9,20 @@
 		<link rel="stylesheet" type="text/css" href="styles/style.css" />
 		<link rel="stylesheet" href="styles/custom.css" />
 	</head>
-	<body>
-		<h1>Random Quote Generator</h1>
+	<body class="flex flex-col w-screen h-screen py-8 text-center">
+		<h1 class="text-2xl font-bold sm:text-3xl md:text-5xl md:mt-4">
+			Random Quote Generator
+		</h1>
+		<div
+			class="mx-auto mt-8 htmx-indicator loading loading-spinner loading-md"
+			id="loading-indicator"
+		></div>
+		<div
+			id="quote"
+			class="w-9/12 mx-auto mt-10 sm:text-lg md:text-xl md:mt-16 min-h-[25vh] md:w-7/12"
+		></div>
 		<button
+			class="px-3 py-1.5 mx-auto mt-12 rounded btn btn-outline w-max flex justify-center items-center duration-300 outline-none"
 			id="getQuote"
 			hx-get="/getRandomQuote"
 			hx-trigger="click"
@@ -21,8 +32,14 @@
 		>
 			Get Quote
 		</button>
-		<span class="loading loading-spinner loading-md"></span>
-		<div id="quote"></div>
-		<button id="themeChanger" onclick="changeTheme()">Light Mode</button>
+		<footer class="mt-auto">
+			<button
+				id="themeChanger"
+				onclick="changeTheme()"
+				class="btn px-4 py-1.5 rounded duration-300 outline-none"
+			>
+				Light Mode
+			</button>
+		</footer>
 	</body>
 </html>

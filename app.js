@@ -19,6 +19,7 @@ app.get('/getRandomQuote', async (req, res) => {
 
 		res.set('Content-Type', 'text/html')
 		res.send(`<quote>${quote}</quote>
+					<br />
                     <p><cite>-&nbsp;${author}</cite></p>`)
 	} catch (err) {
 		res.status(500).send('Error fetching the quote')
