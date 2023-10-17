@@ -13,6 +13,13 @@
 	},
 	"scripts": {
 		"buildcss": "npx tailwindcss -i public/styles/input.css -o  public/styles/style.css --watch",
-		"watch": "nodemon app.js"
-	}
+		"watch": "nodemon app.js",
+		"start": "node app.js"
+	},
+	"name": "quotes-htmx",
+	"version": "1.0.0",
+	"main": "app.js",
+	"author": "Nirzon Taru Karmakar",
+	"license": "ISC",
+	"description": ""
 }
