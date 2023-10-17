@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" data-theme="dark" id="HTML">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="scripts/htmx.min.js"></script>
+		<script src="scripts/changeTheme.js" defer></script>
+		<link rel="stylesheet" type="text/css" href="styles/style.css" />
+		<link rel="stylesheet" href="styles/custom.css" />
+	</head>
+	<body>
+		<h1>Random Quote Generator</h1>
+		<button
+			id="getQuote"
+			hx-get="/getRandomQuote"
+			hx-trigger="click"
+			hx-swap="innerHTML transition:true"
+			hx-target="#quote"
+			hx-indicator="#loading-indicator"
+		>
+			Get Quote
+		</button>
+		<span class="loading loading-spinner loading-md"></span>
+		<div id="quote"></div>
+		<button id="themeChanger" onclick="changeTheme()">Light Mode</button>
+	</body>
+</html>
