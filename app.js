@@ -30,3 +30,5 @@ app.get('/getRandomQuote', async (req, res) => {
 app.listen(port, () => {
 	console.log(`Server up on port ${port}`)
 })
+
+export default app

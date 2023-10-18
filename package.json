@@ -14,7 +14,8 @@
 	"scripts": {
 		"buildcss": "npx tailwindcss -i public/styles/input.css -o  public/styles/style.css --watch",
 		"watch": "nodemon app.js",
-		"start": "node app.js"
+		"start": "node app.js",
+		"vercel-build": "echo building..."
 	},
 	"name": "quotes-htmx",
 	"version": "1.0.0",
