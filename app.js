@@ -1,7 +1,11 @@
+// Initializing express
 const express = require('express')
 const app = express()
+
+// Setting a port to the server
 const port = process.env.PORT || 3000
 
+// Sets the static assets directory to the public folder
 app.use(express.static('public'))
 
 // Initial page render
@@ -31,4 +35,5 @@ app.listen(port, () => {
 	console.log(`Server up on port ${port}`)
 })
 
+// Exports the app so we can use it elsewhere
 export default app
